@@ -1,0 +1,37 @@
+version: '3.1'
+
+services:
+  db:
+    container_name: pgsql
+    image: postgres:14.5
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: "joao4lua"
+      PGDATA: /var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    volumes:
+      - /mnt/c/Users/denil/Documents/Code/sifipe/docker-volume:/var/lib/postgres/sifipe:z
+    networks:
+      - sifipe-network 
+  # docker-from-zero-to-mastery-java: 
+  #   image: docker-from-zero-to-mastery-java 
+  #   restart: always 
+  #   build: 
+  #     context: . 
+  #     dockerfile: app/Dockerfile 
+  #   working_dir: /app 
+  #   environment: 
+  #     TZ: America/Sao_Paulo 
+  #   ports: 
+  #     - "8080:8080"  
+  #   command: mvn spring-boot:run 
+  #   depends_on: 
+  #     - db 
+  #   networks: 
+  #     - sifipe-network 
+networks: 
+    sifipe-network: 
+        driver: bridge
+
+

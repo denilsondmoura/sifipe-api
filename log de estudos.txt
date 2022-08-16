@@ -1,0 +1,21 @@
+(17-08-2022)
+- what did i today?
+- there is any problem?
+- what must i do tomorow?
+-------------------------------------------------------------------------------------------------------------------
+(16-08-2022)
+- what did i today?
+resolvi o problema de permissão do postgres. criei o projeto spring 
+- there is any problem?
+criei o endpoint /clientes pra testar a api mas nn funciona
+- what must i do tomorow?
+Recriar o projeto do zero. Configurar com o postgres
+-------------------------------------------------------------------------------------------------------------------
+(15-08-2022)
+- what did i today?
+Estudei um basico de maven, diferença entre .jar e .war, e tentei subir um container postgres
+- there is any problem?
+Não consigo subir o container do postgres. Problema de permissão no diretorio. Preciso pegar aquele arquivo docker-compose da minha maquina na CGE
+- what must i do tomorow?
+Estudar sobre o wildfly
+Criar o projeto Spring Boot
