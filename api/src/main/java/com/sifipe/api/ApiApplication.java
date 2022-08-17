@@ -1,13 +1,13 @@
-package com.sifipe.api.sifipeapi;
+package com.sifipe.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SifipeApiApplication {
+public class ApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SifipeApiApplication.class, args);
+		SpringApplication.run(ApiApplication.class, args);
 	}
 
 }

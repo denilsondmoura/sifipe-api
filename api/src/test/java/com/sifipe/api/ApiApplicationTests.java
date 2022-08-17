@@ -1,10 +1,10 @@
-package com.sifipe.api.sifipeapi;
+package com.sifipe.api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SifipeApiApplicationTests {
+class ApiApplicationTests {
 
 	@Test
 	void contextLoads() {

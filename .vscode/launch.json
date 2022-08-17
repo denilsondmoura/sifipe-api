@@ -2,11 +2,11 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Spring Boot-SifipeApiApplication<sifipe-api>",
+            "name": "Spring Boot-ApiApplication<api>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
-            "mainClass": "com.sifipe.api.sifipeapi.SifipeApiApplication",
-            "projectName": "sifipe-api",
+            "mainClass": "com.sifipe.api.ApiApplication",
+            "projectName": "api",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         }
