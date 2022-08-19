@@ -2,10 +2,15 @@ package com.sifipe.api.entity;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.Date;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -19,9 +24,25 @@ public class Despesa implements Serializable{
 
 	private String descricao;
 
-	private BigDecimal tipo;
+	@ManyToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name = "categoria", referencedColumnName = "id")
+	private CategoriaDespesa categoria;
+
+	private Date data;
 	
 	private BigDecimal valor;
+
+	public Despesa() {
+
+	}
+
+	public Despesa(long id, String descricao, CategoriaDespesa categoria, Date data, BigDecimal valor) {
+		this.id = id;
+		this.descricao = descricao;
+		this.categoria = categoria;
+		this.data = data;
+		this.valor = valor;
+	}
 
 	public long getId() {
 		return id;
@@ -39,12 +60,20 @@ public class Despesa implements Serializable{
 		this.descricao = descricao;
 	}
 
-	public BigDecimal getTipo() {
-		return tipo;
+	public CategoriaDespesa getCategoria() {
+		return categoria;
 	}
 
-	public void setTipo(BigDecimal tipo) {
-		this.tipo = tipo;
+	public void setCategoria(CategoriaDespesa categoria) {
+		this.categoria = categoria;
+	}
+
+	public Date getData() {
+		return data;
+	}
+
+	public void setData(Date data) {
+		this.data = data;
 	}
 
 	public BigDecimal getValor() {
@@ -54,6 +83,7 @@ public class Despesa implements Serializable{
 	public void setValor(BigDecimal valor) {
 		this.valor = valor;
 	}
+
 	
 	
 	
