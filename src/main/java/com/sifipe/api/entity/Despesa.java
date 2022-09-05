@@ -24,7 +24,7 @@ public class Despesa implements Serializable{
 
 	private String descricao;
 
-	@ManyToOne(cascade=CascadeType.ALL)
+	@ManyToOne(cascade=CascadeType.MERGE)
 	@JoinColumn(name = "categoria", referencedColumnName = "id")
 	private CategoriaDespesa categoria;
 
