@@ -25,7 +25,7 @@ public class Expenses  implements Serializable{
 	private String description;
 
 	
-	@ManyToOne(cascade=CascadeType.ALL)
+	@ManyToOne(cascade=CascadeType.MERGE)
 	@JoinColumn(name = "category", referencedColumnName = "id")
 	private ExpenseCategories category;
 	
